@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Developer.create(name: "Spok", email: "spok@gmail.com", password_digest: "password")
-Developer.create(name: "Jimmy Dean", email: "jimmy@gmail.com", password_digest: "password")
-Developer.create(name: "Aunt Jemima", email: "aunt@gmail.com", password_digest: "password")
+Developer.create(name: "Spok", email: "spok@gmail.com", password: "password")
+Developer.create(name: "Jimmy Dean", email: "jimmy@gmail.com", password: "password")
+Developer.create(name: "Aunt Jemima", email: "aunt@gmail.com", password: "password")
 
 Project.create(name: "Critical Analysis of Flash Gordon", max_hours: 10)
 Project.create(name: "The Capital Forming Effects of Military Mobilization", max_hours: 20)

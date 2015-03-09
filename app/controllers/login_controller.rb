@@ -4,7 +4,7 @@ class LoginController < ApplicationController
   end
 
   def create
-    user =Developer.find_by(email: params[:login][:email].downcase)
+    user = Developer.find_by(email: params[:login][:email].downcase)
     if user && user.authenticate(params[:login][:password])
       make_session(user)
       redirect_to developers_path
