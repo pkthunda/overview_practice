@@ -10,6 +10,16 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+ @import "bourbon";
+ @import "neat";
+
+ body {
+       font-family:arial;
+       text-align :center;
+       // border-style :groove;
+       // border-color :darkgrey;
+       // border-size :500px;
+       @include background-image(url("http://www.pptbackgrounds.net/uploads/orange-wave-lines-backgrounds-wallpapers.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+       }
