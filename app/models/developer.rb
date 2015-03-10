@@ -3,4 +3,5 @@ class Developer < ActiveRecord::Base
   has_many :time_entries
   validates :name, presence: true
   validates :email, uniqueness: true
+  
 end

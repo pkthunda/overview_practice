@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Sites</h1>
+<h1>Listing Entries</h1>
 
 <table>
   <thead>
@@ -13,13 +13,13 @@
   </thead>
 
   <tbody>
-    <% @developers.each do |d| %>
+    <% @developers.each do |developer| %>
       <tr>
-        <td><%= d.name %></td>
-        <td><%= d.email %></td>
-        <td><%= link_to 'Show', d %></td>
+        <td><%= developer.name %></td>
+        <td><%= developer.email %></td>
+        <td><%= link_to 'Show', developer %></td>
         <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
-        <td><%= link_to 'Destroy', d, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
