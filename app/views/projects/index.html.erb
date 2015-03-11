@@ -1,2 +1,8 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<%= render 'table' %>
+
+<br><%= button_to 'New Project', new_project_path, :method => "get" %></br>
+<br><%= button_to 'Back', developers_path, :method => "get" %></br>
+<br><%= button_to "Time Entry List Page", time_entries_path, :method => "get"  %></br>
+<br><%= button_to "Log out", logout_path, :method => "get" %></br>

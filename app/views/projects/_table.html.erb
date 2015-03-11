@@ -1,0 +1,24 @@
+<h1>Projects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project Name</th>
+      <th>Maximum hours worked</th>
+      <!-- <th>Time Entries</th> -->
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.name %></td>
+        <td><%= project.max_hours %></td>
+        <td><br><%= button_to 'Show', project, :method => "get" %></br></td>
+        <td><%= button_to 'Edit', edit_project_path(project), :method => "get" %></td>
+        <td><%= button_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

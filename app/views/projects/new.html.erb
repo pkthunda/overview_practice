@@ -1,2 +1,7 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
+<h1>Add Project</h1>
+
+<br><%= render 'form' %></br>
+
+<br><%= button_to 'Back', projects_path, :method => "get" %></br>
+<br><%= button_to 'Home', login_path, :method => "get" %></br>
+<br><%= button_to "Log out", logout_path, :method => "get" %></br>

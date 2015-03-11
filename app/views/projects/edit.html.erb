@@ -1,2 +1,7 @@
-<h1>Projects#edit</h1>
-<p>Find me in app/views/projects/edit.html.erb</p>
+<h1>Edit Your Project</h1>
+
+<br><%= render 'form' %></br>
+
+<br><%= button_to 'Back', projects_path, :method => "get" %></br>
+<br><%= button_to 'Home', developers_path, :method => "get" %></br>
+<br><%= button_to "Log out", logout_path, :method => "get" %></br>

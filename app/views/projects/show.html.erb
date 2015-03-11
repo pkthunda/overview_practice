@@ -1,2 +1,15 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @project.max_hours %>
+</p>
+
+
+<br><%= button_to 'Back', projects_path, :method => "get" %></br>
+<br><%= button_to "Log out", logout_path, :method => "get" %></br>
