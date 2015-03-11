@@ -8,6 +8,10 @@
 </head>
 <body>
 
+  <% if session[:developer_id] %>
+    <%= link_to "Log Out", login_logout_path %>
+  <% end %>
+
 <%= yield %>
 
 </body>

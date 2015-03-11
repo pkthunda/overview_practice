@@ -4,8 +4,8 @@ class Developer < ActiveRecord::Base
   validates :name, presence: true
   validates :email, uniqueness: true
 
-  def max_work
-    
+  def hours_worked
+
   end
 
 end

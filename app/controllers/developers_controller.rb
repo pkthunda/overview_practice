@@ -1,5 +1,5 @@
 class DevelopersController < ApplicationController
-  before_action :authenticate_user
+  before_action :check_logged_in
   before_action :set_developer, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -9,6 +9,7 @@ class DevelopersController < ApplicationController
   end
 
   def show
+    @developer = Developer.find(params[:id])
   end
 
   def new
@@ -17,6 +18,7 @@ class DevelopersController < ApplicationController
   end
 
   def edit
+    @developer = Developer.find(params[:id])
   end
 
   def create
@@ -42,11 +44,19 @@ class DevelopersController < ApplicationController
   end
 
   private
+
     def set_developer
       @developer = Developer.find(params[:id])
     end
 
     def developer_params
-      params.require(:developer).permit(:name, :email, :password)
+      params.require(:developer).permit(:name, :email, :password, :time_entries)
     end
+
+    def check_logged_in
+    if session[:developer_id].blank?
+      flash[:notice] = "I told you to back off, bro"
+      redirect_to login_login_path
+    end
+  end
 end

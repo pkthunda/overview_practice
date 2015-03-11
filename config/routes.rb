@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'login' => 'login#new'
+  get 'login/login'
+  post 'login/login'
 
-  post 'login' => 'login#create'
-
-  get 'logout' => 'login#logout'
-
+  get 'login/logout'
 
 
   resources :developers
@@ -18,7 +16,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'login#new'
+   root 'developers#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
