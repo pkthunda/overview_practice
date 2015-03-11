@@ -4,8 +4,6 @@ ruby '2.2.0'
 
 gem 'bourbon'
 
-gem 'neat'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use SCSS for stylesheets
@@ -28,7 +26,7 @@ gem 'ranked-model'
 
 gem 'jquery-ui-rails'
 
-# gem 'bootstrap-sass'
+gem 'bootstrap-sass'
 
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'

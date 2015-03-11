@@ -8,8 +8,6 @@ class DevelopersController < ApplicationController
     # @time_entries = TimeEntry.all
   end
 
-  # GET /developers/1
-  # GET /developers/1.json
   def show
   end
 
