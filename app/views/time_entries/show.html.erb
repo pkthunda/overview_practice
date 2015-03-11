@@ -1,2 +1,15 @@
-<h1>TimeEntries#show</h1>
-<p>Find me in app/views/time_entries/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Duration Worked:</strong>
+  <%= @time_entry.duration_worked %>
+</p>
+
+<p>
+  <strong>Worked On:</strong>
+  <%= @time_entry.worked_on %>
+</p>
+
+
+<br><%= button_to 'Back', time_entries_path, :method => "get" %></br>
+<br><%= button_to "Log out", logout_path, :method => "get" %></br>

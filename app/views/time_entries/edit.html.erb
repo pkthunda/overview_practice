@@ -1,2 +1,7 @@
-<h1>TimeEntries#edit</h1>
-<p>Find me in app/views/time_entries/edit.html.erb</p>
+<h1>Edit Your Time Log</h1>
+
+<br><%= render 'form' %></br>
+
+<br><%= button_to 'Back', time_entries_path, :method => "get" %></br>
+<br><%= button_to 'Home', developers_path, :method => "get" %></br>
+<br><%= button_to "Log out", logout_path, :method => "get" %></br>

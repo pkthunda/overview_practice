@@ -1,2 +1,8 @@
-<h1>TimeEntries#index</h1>
-<p>Find me in app/views/time_entries/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<%= render 'table' %>
+
+<br><%= button_to 'New Entry', new_time_entry_path, :method => "get" %></br>
+<br><%= button_to "Developers Page", developers_path, :method => "get"  %></br>
+<br><%= button_to 'Back', projects_path, :method => "get" %></br>
+<br><%= button_to "Log out", logout_path, :method => "get" %></br>

@@ -42,7 +42,7 @@ class TimeEntriesController < ApplicationController
 
   private
     def set_time_entry
-      @time_entry = Time_entry.find(params[:id])
+      @time_entry = TimeEntry.find(params[:id])
     end
 
     def time_entry_params
