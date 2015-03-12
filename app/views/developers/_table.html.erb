@@ -2,7 +2,7 @@
 
 <h1>Developers</h1>
 
-<table class="table table-bordered table-striped" id="sortable">
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,7 +16,11 @@
       <tr>
         <td><%= developer.name %></td>
         <td><%= developer.email %></td>
-        <td><%= developer.hours_worked %></td>
+        <% if developer.hours_worked > 40 %>
+         <td class="red-text"><%= developer.hours_worked %></td>
+        <% else %>
+         <td><%= developer.hours_worked %></td>
+        <% end %>
         <td><br><%= button_to 'Edit', edit_developer_path(developer), :method => "get" %></br></td>
         <td><%= button_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

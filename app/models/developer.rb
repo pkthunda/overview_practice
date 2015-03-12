@@ -1,6 +1,6 @@
 class Developer < ActiveRecord::Base
   has_secure_password
-  has_many :time_entries
+  has_many :time_entries, dependent: :restrict_with_error
   validates :name, presence: true
   validates :email, uniqueness: true
 

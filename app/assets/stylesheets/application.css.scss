@@ -13,12 +13,19 @@
  *= require_self
  */
 
-@import "bourbon";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.modal-dialog {
-  width: 300px;
+// .modal-dialog {
+//   width: 300px;
+// }
+
+.table-bordered {
+
+}
+
+.red-text {
+  color: red;
 }
 
 // body {
