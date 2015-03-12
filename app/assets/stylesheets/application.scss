@@ -14,17 +14,19 @@
  */
 
 @import "bourbon";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-body {
-  font-family: "body font", arial;
-  text-align :center;
-  // border-style :groove;
-  // border-color :darkgrey;
-  // border-size :500px;
-  @include background-image(url("http://www.jillsbistro.com/files/QuickSiteImages/QS_1253h0001.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
-  background-size: 830px 700px;
+.modal-dialog {
+  width: 300px;
 }
 
-.table {
-  padding-bottom: 10px;
-}
+// body {
+//   font-family: "body font", arial;
+//   text-align :center;
+//   // border-style :groove;
+//   // border-color :darkgrey;
+//   // border-size :500px;
+//   @include background-image(url("http://www.jillsbistro.com/files/QuickSiteImages/QS_1253h0001.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+//   background-size: 830px 700px;
+// }

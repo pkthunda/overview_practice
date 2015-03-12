@@ -4,6 +4,7 @@ class DevelopersController < ApplicationController
 
   def index
     @developers = Developer.all
+    @developer = Developer.new
     # @projects = Project.all
     # @time_entries = TimeEntry.all
   end
@@ -50,12 +51,12 @@ class DevelopersController < ApplicationController
     end
 
     def developer_params
-      params.require(:developer).permit(:name, :email, :password, :time_entries)
+      params.require(:developer).permit(:developer_id, :name, :email, :password)
     end
 
     def check_logged_in
     if session[:developer_id].blank?
-      flash[:notice] = "I told you to back off, bro"
+      flash[:notice] = "I told you to back off, bro."
       redirect_to login_login_path
     end
   end

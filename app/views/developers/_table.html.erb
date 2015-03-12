@@ -1,12 +1,13 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Developers</h1>
 
-<table>
+<table class="table table-bordered table-striped" id="sortable">
   <thead>
     <tr>
       <th>Name</th>
       <th>Email</th>
       <th>Hours Worked</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -22,3 +23,9 @@
     <% end %>
   </tbody>
 </table>
+
+<!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#new-modal">
+  New Developer
+</button>
+
+<%= render partial: 'new_dev' %> 
