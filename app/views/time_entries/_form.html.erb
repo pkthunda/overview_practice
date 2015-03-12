@@ -1,23 +1,23 @@
 <%= form_for(@time_entry) do |f| %>
   <div class="field">
-    <%= f.label :duration_worked %>
+    <%= f.label :duration_worked, "Work duration:" %>
     <%= f.text_field :duration_worked %>
   </div>
 <br>
   <div class="field">
-  <%= f.label :worked_on %>
-  <%= f.text_field :worked_on, class: 'form-control' %>
+  <%= f.label :worked_on, "Date of work:" %>
+  <%= f.date_select :worked_on, class: 'form-control' %>
 </br>
 <br>
   <div class="field">
     <%= f.label :developer_id %><br>
-    <%= f.collection_select :developer_id, Developer.all, :id, :duration_worked %>
+    <%= f.collection_select :developer_id, Developer.all, :id, :name %>
   </div>
 </br>
 <br>
   <div class="field">
     <%= f.label :project_id %><br>
-    <%= f.collection_select :project_id, Project.all, :id, :max_hours %>
+    <%= f.collection_select :project_id, Project.all, :id, :name %>
   </div>
 </br>
 

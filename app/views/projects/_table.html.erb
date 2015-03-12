@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Project Name</th>
-      <th>Total hours worked</th>
+      <th>Hours worked</th>
       <th>Date</th>
       <th colspan="3"></th>
     </tr>
@@ -14,10 +14,9 @@
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.name %></td>
-        <td><%= project.max_hours %></td>
+        <td><%= project.total_hours %></td>
         <td><%= project.worked_on %></td>
-        <td><br><%= button_to 'Show', project, :method => "get" %></br></td>
-        <td><%= button_to 'Edit', edit_project_path(project), :method => "get" %></td>
+        <td><br><%= button_to 'Edit', edit_project_path(project), :method => "get" %></br></td>
         <td><%= button_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
   has_many :time_entries
 
-  def max_hours
+  def total_hours
     self.time_entries.reduce(0) do |sum, entry|
       sum + entry.duration_worked
     end

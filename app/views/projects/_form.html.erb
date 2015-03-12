@@ -1,13 +1,19 @@
 <%= form_for(@project) do |f| %>
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label :name, "Name:" %>
     <%= f.text_field :name %>
   </div>
 <br>
   <div class="field">
-  <%= f.label :max_hours %>
+  <%= f.label :max_hours, "Maximum hours:" %>
   <%= f.text_field :max_hours, class: 'form-control' %>
 </br>
+<br>
+  <div class="field">
+  <%= f.label :total_hours, "Hours worked:" %>
+  <%= f.text_field :total_hours, class: 'form-control' %>
+</br>
+
 <br>
   <div class="actions">
   <%= f.submit %>

@@ -16,8 +16,7 @@
         <td><%= developer.name %></td>
         <td><%= developer.email %></td>
         <td><%= developer.hours_worked %></td>
-        <td><br><%= button_to 'Show', developer, :method => "get" %></br></td>
-        <td><%= button_to 'Edit', edit_developer_path(developer), :method => "get" %></td>
+        <td><br><%= button_to 'Edit', edit_developer_path(developer), :method => "get" %></br></td>
         <td><%= button_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

@@ -15,8 +15,7 @@
       <tr>
         <td><%= time_entry.duration_worked %></td>
         <td><%= time_entry.worked_on %></td>
-        <td><br><%= button_to 'Show', time_entry, :method => "get" %></br></td>
-        <td><%= button_to 'Edit', edit_time_entry_path(time_entry), :method => "get" %></td>
+        <td><br><%= button_to 'Edit', edit_time_entry_path(time_entry), :method => "get" %></br></td>
         <td><%= button_to 'Destroy', time_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

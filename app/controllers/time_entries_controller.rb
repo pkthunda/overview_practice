@@ -17,9 +17,8 @@ class TimeEntriesController < ApplicationController
 
   def create
     @time_entry = TimeEntry.new(time_entry_params)
-    respond_to do |format|
       if @time_entry.save
-        redirect_to @time_entry, notice: 'Time_entry was successfully created.'
+        redirect_to @time_entry, notice: 'Time entry was successfully created.'
       else
         render :new
     end
@@ -27,7 +26,7 @@ class TimeEntriesController < ApplicationController
 
   def update
     if @time_entry.update(time_entry_params)
-      redirect_to @time_entry, notice: 'Time_entry was successfully updated.'
+      redirect_to @time_entry, notice: 'Time entry was successfully updated.'
     else
       render :edit
     end
@@ -35,17 +34,17 @@ class TimeEntriesController < ApplicationController
 
   def destroy
     @time_entry.destroy
-      redirect_to time_entries_url, notice: 'Time_entry was successfully destroyed.'
-    end
+    redirect_to time_entries_url, notice: 'Time entry was successfully destroyed.'
   end
 
 
   private
-    def set_time_entry
-      @time_entry = TimeEntry.find(params[:id])
-    end
 
-    def time_entry_params
-      params.require(:time_entry).permit(:duration_worked, :project_id, :developer_id, :worked_on)
-    end
+  def set_time_entry
+    @time_entry = TimeEntry.find(params[:id])
+  end
+
+  def time_entry_params
+    params.require(:time_entry).permit(:duration_worked, :project_id, :developer_id, :worked_on)
+  end
 end
