@@ -5,7 +5,14 @@ class Developer < ActiveRecord::Base
   validates :email, uniqueness: true
 
   def hours_worked
-
+    self.time_entries.reduce(0) do |sum, entry|
+      sum + entry.duration_worked
+    end
   end
 
 end
+
+
+# [1,2,3,4].reduce(0) do |sum, num|
+#   sum + num.to_s
+# end

@@ -9,7 +9,7 @@
 <body>
 
   <% if session[:developer_id] %>
-    <%= link_to "Log Out", login_logout_path %>
+    <br><%= button_to "Log Out", login_logout_path, :method => "get" %></br>
   <% end %>
 
 <%= yield %>
