@@ -4,9 +4,9 @@
   <thead>
     <tr>
       <th>Project Name</th>
-      <th>Total Hours</th>
       <th>Date</th>
-      <th colspan="3"></th>
+      <th>Total Hours</th>
+      <th colspan="1"></th>
     </tr>
   </thead>
 
@@ -14,10 +14,13 @@
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.name %></td>
-        <td><%= project.total_hours %></td>
         <td><%= project.worked_on %></td>
-        <td><br><%= button_to 'Edit', edit_project_path(project), :method => "get" %></br></td>
-        <td><%= button_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if project.total_hours > project.max_hours %>
+         <td class="red-text"><%= project.total_hours %></td>
+        <% else %>
+         <td><%= project.total_hours %></td>
+        <% end %>
+        <td><%= link_to 'Edit', edit_project_path(project) %> | <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

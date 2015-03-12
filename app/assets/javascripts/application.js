@@ -12,16 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
 //= require jquery-ui
 //= require jquery-ui/sortable
 //= require jquery-ui/effect-highlight
-//= require bootstrap-sprockets
-
-// $(document).ready(function(){
-//
-//     $('.complete-box').click(function() {
-//         $(this).parents('form:first').submit();
-//     });
-//
-// });
+//= require_tree .

@@ -13,20 +13,18 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import 'bourbon';
+@import "base/base";
+@import 'neat';
 
 // .modal-dialog {
 //   width: 300px;
 // }
 
-.table-bordered {
-
-}
-
 .red-text {
   color: red;
 }
+
 
 // body {
 //   font-family: "body font", arial;

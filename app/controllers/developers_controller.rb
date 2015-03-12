@@ -49,8 +49,8 @@ class DevelopersController < ApplicationController
 
 
   ## this went in body in application.html.erb for only deleting/editing user by id ##
-  # <br><%= button_to "Destroy my account", developers_destroy_my_account_path, :method => "get" %></br>
-  # <br><%= button_to 'Edit my account', developers_edit_me_path, :method => "get" %></br>
+  # <br><%= link_to "Destroy my account", developers_destroy_my_account_path %></br>
+  # <br><%= link_to 'Edit my account', developers_edit_me_path %></br>
 
   # def destroy_my_account
   #   @developer = current_user

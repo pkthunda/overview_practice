@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Email</th>
       <th>Hours Worked</th>
+      <th colspan="1"></th>
     </tr>
   </thead>
 
@@ -21,15 +22,8 @@
         <% else %>
          <td><%= developer.hours_worked %></td>
         <% end %>
-        <td><br><%= button_to 'Edit', edit_developer_path(developer), :method => "get" %></br></td>
-        <td><%= button_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_developer_path(developer) %> | <%= link_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#new-modal">
-  New Developer
-</button>
-
-<%= render partial: 'new_dev' %>

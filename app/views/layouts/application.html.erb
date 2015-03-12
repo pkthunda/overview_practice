@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <title>OverviewTimeTrackingApp</title>
-  <%= stylesheet_link_tag    'application' => true %>
-  <%= javascript_include_tag 'application' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
   <% if session[:developer_id] %>
-    <br><%= button_to "Log Out", login_logout_path, :method => "get" %></br>
+    <br><%= link_to "Log Out", login_logout_path %></br>
   <% end %>
 
       <%= yield %>
