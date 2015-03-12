@@ -16,4 +16,8 @@ class ApplicationController < ActionController::Base
   #     return false
   #   end
   # end
+
+  def current_user
+    Developer.find_by_id(session[:developer_id])
+  end
 end

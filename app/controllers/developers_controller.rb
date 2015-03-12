@@ -19,8 +19,11 @@ class DevelopersController < ApplicationController
   end
 
   def edit
-    @developer = Developer.find(params[:id])
   end
+
+  # def edit_me
+  #   @developer = current_user
+  # end
 
   def create
     @developer = Developer.new(developer_params)
@@ -44,6 +47,18 @@ class DevelopersController < ApplicationController
     redirect_to developers_url, notice: 'Developer was successfully destroyed.'
   end
 
+
+  ## this went in body in application.html.erb for only deleting/editing user by id ##
+  # <br><%= button_to "Destroy my account", developers_destroy_my_account_path, :method => "get" %></br>
+  # <br><%= button_to 'Edit my account', developers_edit_me_path, :method => "get" %></br>
+
+  # def destroy_my_account
+  #   @developer = current_user
+  #   @developer.destroy
+  #   session[:developer_id] = nil
+  #   redirect_to login_login_path
+  # end
+
   private
 
     def set_developer
@@ -51,7 +66,7 @@ class DevelopersController < ApplicationController
     end
 
     def developer_params
-      params.require(:developer).permit(:developer_id, :name, :email, :password)
+      params.require(:developer).permit(:name, :email, :password)
     end
 
     def check_logged_in

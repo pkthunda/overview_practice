@@ -3,15 +3,13 @@ class TimeEntry < ActiveRecord::Base
   belongs_to :project
 
 
-  # def developer_name
-  #   self.developers.each do |d|
-  #     return d.name
-  #   end
-  # end
+  def developer_name
+    Developer.find_by_id(session[:developer_id])
+  end
   #
   # def project_name
   #   self.projects.each do |t|
-  #     return t.name
+  #     return t
   #   end
   # end
 

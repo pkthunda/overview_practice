@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'login/logout'
 
+  # get 'developers/destroy_my_account'
+  # get 'developers/edit_me'
 
   resources :developers
   resources :projects
