@@ -2,9 +2,11 @@ class Project < ActiveRecord::Base
   has_many :time_entries
 
   def total_hours
-    self.time_entries.reduce(0) do |sum, entry|
-      sum + entry.duration_worked
+    result = 0
+    time_entries.each do |entry|
+      result += entry.duration_worked
     end
+    return result
   end
 
   def worked_on
